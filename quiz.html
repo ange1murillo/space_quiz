@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Angel Murillo IT130 Assignment 6 Quiz</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript">
+   function quizResults(){
+       var totalCorrect = 0, score, displayScore, ans1, ans2, ans3, ans4, ans5, ans6;
+       
+       ans1 ='T';
+       ans2 ='F';
+       ans3 ='T';
+       ans4='D';
+       ans5='A';
+       ans6='C';
+       
+   /*Question 1 */ if(document.planetsQuiz.ques1.value.toUpperCase() === ans1){
+        totalCorrect++;
+        document.planetsQuiz.resultpic1.src= "images/greencheck.png"; 
+    } else {
+        document.planetsQuiz.resultpic1.src="images/redwrong.png";
+    }
+       
+    /*Question 2 */ if(document.planetsQuiz.ques2.value.toUpperCase() === ans2){
+        totalCorrect++;
+        document.planetsQuiz.resultpic2.src= "images/greencheck.png"; 
+    } else {
+        document.planetsQuiz.resultpic2.src="images/redwrong.png";
+    }
+       
+    /*Question 3 */ if(document.planetsQuiz.ques3.value.toUpperCase() === ans3){
+        totalCorrect++;
+        document.planetsQuiz.resultpic3.src= "images/greencheck.png"; 
+    } else {
+        document.planetsQuiz.resultpic3.src="images/redwrong.png";
+    }
+       
+    /*Question 4 */ if(document.planetsQuiz.ques4.value.toUpperCase() === ans4){
+        totalCorrect++;
+        document.planetsQuiz.resultpic4.src= "images/greencheck.png"; 
+    } else {
+        document.planetsQuiz.resultpic4.src="images/redwrong.png";
+    }
+       
+    /*Question 5 */ if(document.planetsQuiz.ques5.value.toUpperCase() === ans5){
+        totalCorrect++;
+        document.planetsQuiz.resultpic5.src= "images/greencheck.png"; 
+    } else {
+        document.planetsQuiz.resultpic5.src="images/redwrong.png";
+    }
+       
+    /*Question 6 */ if(document.planetsQuiz.ques6.value.toUpperCase() === ans6){
+        totalCorrect++;
+        document.planetsQuiz.resultpic6.src= "images/greencheck.png"; 
+    } else {
+        document.planetsQuiz.resultpic6.src="images/redwrong.png";
+    }
+       
+    score = (totalCorrect / 6) * 100;
+    score = score.toFixed(2);
+    goodScore = ("Awesome! You got " + totalCorrect + " questions right. " + " Your score is " + score + " %");
+    badScore=("You got " + totalCorrect + " question(s) right. You scored " + score + " % " + ". Give it another try for a higher score! ");
+    happyfacePic = '<img height="350" id="happy-image" src="images/happyplanet.PNG" alt="Happy Face">';
+    sadfacePic='<img height="350px" id="sad-image" src="images/sadplanet.PNG" alt="Sad Face">';
+       
+    
+    if(totalCorrect >=4){
+        document.getElementById("displayScore").innerHTML = goodScore + "<br><br>" + happyfacePic;
+    } else {
+        document.getElementById("displayScore").innerHTML = badScore + "<br><br>" + sadfacePic;
+    }
+   }
+       
+ 
+</script> 
+</head>
+<body style="background-image:url(images/galaxycyclone.jpg);">
+    
+    
+<div class="container">
+
+<nav id="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+  </ul>   
+</nav>
+    
+  
+
+
+    <br><br><br>
+    
+<div id="quizForm">
+    
+<h1>Solar System Quiz!</h1>
+    
+<img src="images/movingplanets.gif">
+    
+<br><br>
+    
+<form name="planetsQuiz">
+    
+<table class="table">
+    <tbody>
+        <tr>
+            <th class="table-head" colspan="4">True (T) & False (F) Questions</th>
+        </tr>
+        
+    <!--Question 1-->
+        <tr>
+            <td class="q1">1.</td>
+            
+            <td>The earth is the third planet furthest from the sun. </td>
+            
+            <td>
+                <input type="textbox" name="ques1" size="5" value>
+            </td>
+            
+            <td>
+                <img name="resultpic1" src="" width="20px">
+            
+            </td>
+        
+        </tr>
+        
+    <!--Question 2-->
+        <tr>
+            <td>2.</td>
+            
+            <td>Pluto is considered a planet.</td>
+            
+            <td>
+                <input type="textarea" name="ques2" size="5" value>
+            </td>
+            
+            <td>
+                <img name="resultpic2" src="" width="20px">
+            </td>
+        
+        </tr>
+        
+    <!--Question 3-->
+        <tr>
+            <td>3.</td>
+            
+            <td>Venus has the thickest atmosphere.</td>
+            
+            <td>
+                <input type="textarea" name="ques3" size="5" value>
+            </td>
+            
+            <td>
+                <img name="resultpic3" src="" width="20px">
+            </td>
+        
+        </tr>
+        
+        <tr>
+            <th class="table-head" colspan="4">Multiple Choice Questions</th>
+        </tr>
+        
+    <!--Question 4-->
+        <tr>
+            <td class="q4">4.</td>
+            <td>
+                Which of the following is considered a Gas Giant planet?
+                <br><br>
+                A. Earth
+                <br>
+                B. Mercury
+                <br>
+                C. Mars
+                <br>
+                D. Jupiter
+            </td>
+            
+            <td>
+                <input type="textarea" name="ques4" size="5" value>
+            </td>
+            
+            <td>
+                <img name="resultpic4" src="" width="20px">
+            </td>
+        </tr>
+        
+    <!--Question 5-->
+        <tr>
+            <td class="q5">5.</td>
+            <td>
+                Which of the following is considered a Terrestrial planet?
+                <br><br>
+                A. Earth
+                <br>
+                B. Neptune
+                <br>
+                C. Uranus
+                <br>
+                D. Saturn
+            </td>
+            
+            <td>
+                <input type="textarea" name="ques5" size="5" value>
+            </td>
+            
+           <td>
+                <img name="resultpic5" src="" width="20px">
+            </td>
+        </tr>
+        
+    <!--Question 6-->
+        <tr>
+            <td class="q6">6.</td>
+            <td>
+                What is the largest body in the solar system?
+                <br><br>
+                A. Jupiter
+                <br>
+                B. Saturn
+                <br>
+                C. Sun
+                <br>
+                D. Venus
+            </td>
+            
+            <td>
+                <input type="textarea" name="ques6" size="5" value>
+            </td>
+            
+          <td>
+                <img name="resultpic6" src="" width="20px">
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    
+    <br>
+    
+    <input id="button" type="button" value="Submit" onclick="quizResults()">
+    
+    <h2>Submit Quiz to see your resluts</h2>
+    <p id="displayScore"></p>
+    <br>
+    
+    
+    </form>
+
+    
+    </div>
+    </div>
+</body>
+
+
+
+</html>
